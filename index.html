@@ -61,6 +61,20 @@
         </div>
       </div>
 
+      <div class="modal fade" id="myModal2" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Oops!</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Looks like you have failed...<br>Keep focused!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
     <script src="https://www.youtube.com/iframe_api"></script>
     <script>
     let newId = ""
@@ -139,7 +153,7 @@
           setTimeout(() => {
             player.stopVideo();
             if(youFcked)
-              window.open("https://www.google.com/search?q=creepy+picture&sxsrf=APwXEdfQrLhDJVrqljOERxsJt5eudT1obw:1682621740405&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjJwYG53sr-AhWrk_0HHeKAAxAQ_AUoAXoECAEQAw&biw=1536&bih=714&dpr=1.25#imgrc=5VkYSUluXvHrjM")
+              modalCall()
             youFcked = false },500)
         }
         function mouseOut()
@@ -154,6 +168,11 @@
         function btnD()
         {
             press = true
+        }
+        function modalCall()
+        {
+          var modal = new bootstrap.Modal(document.getElementById("myModal2"))
+          modal.show()
         }
 
     </script>
